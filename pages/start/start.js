@@ -1,5 +1,5 @@
-//login.js
-//获取应用实例
+//start.js
+//welcome
 var app = getApp();
 Page({
   data: {
@@ -9,7 +9,7 @@ Page({
   },
   goToIndex:function(){
     wx.switchTab({
-      url: '/pages/component/index',
+      url: '/pages/home/index',
     });
   },
   onLoad:function(){
@@ -41,7 +41,7 @@ Page({
     });
     setTimeout(function(){
       wx.switchTab({
-        url: '/pages/component/index',
+        url: '/pages/home/index',
       });
     }, 4000);
   }

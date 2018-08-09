@@ -1,6 +1,7 @@
 {
   "pages": [
       "pages/start/start",
+      "pages/home/index",
       "pages/component/index",
       "pages/component/navigation-pages/controller/controller",
       "pages/component/navigation-pages/form/form",
@@ -80,13 +81,13 @@
     "backgroundColor": "#ffffff",
     "list": [
     {
-      "pagePath": "pages/component/index",
+      "pagePath": "pages/home/index",
       "iconPath": "images/wechat.png",
       "selectedIconPath": "images/wechatHL.png",
       "text": "首页"
     }, 
     {
-      "pagePath": "pages/API/index/index",
+      "pagePath": "pages/component/index",
       "iconPath": "images/wechat.png",
       "selectedIconPath": "images/wechatHL.png",
       "text": "产品"
