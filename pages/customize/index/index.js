@@ -10,19 +10,9 @@ Page({
         interval: 3000,
         duration: 2000
     },
-    goToProducts:function(){
-    	wx.switchTab({
-           url: "/pages/products/index/index",
-        })
-	},
 	goToCustomize:function(){
 	    wx.switchTab({
-	      url: '/pages/customize/index/index',
-	    });
-	},
-	goToPartners:function(){
-	    wx.navigateTo({
-	      url: '/pages/partners/index/index',
+	      url: '/pages/customize/show/index',
 	    });
 	}
 })

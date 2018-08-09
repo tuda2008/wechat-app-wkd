@@ -12,9 +12,9 @@
         <image class="wave wave-bg" src="/images/start/wave.png" mode="aspectFill"></image>
       </view>
       <view class="bd">
-         <image class="smalltitle" src="/images/start/confirm.png"></image>
+        <image class="smalltitle" src="/images/start/confirm.png"></image>
         <view class="confirm-btn" bindtap='goToIndex'>
-          <text >我知道了</text>
+          <text>我知道了</text>
         </view>
         <text class="copyright">Copyright © 2017-2018 Wangkeda All Rights Reserved</text>
       </view>

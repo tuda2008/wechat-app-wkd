@@ -11,18 +11,13 @@ Page({
         duration: 2000
     },
     goToProducts:function(){
-    	wx.switchTab({
-           url: "/pages/products/index/index",
-        })
-	},
-	goToCustomize:function(){
 	    wx.switchTab({
-	      url: '/pages/customize/index/index',
+	      url: '/pages/products/index/index',
 	    });
 	},
-	goToPartners:function(){
-	    wx.navigateTo({
-	      url: '/pages/partners/index/index',
-	    });
-	}
+    goToProduct:function(){
+        wx.switchTab({
+          url: '/pages/products/show/index',
+        });
+    }
 })

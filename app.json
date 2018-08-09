@@ -2,6 +2,9 @@
   "pages": [
       "pages/start/start",
       "pages/home/index",
+      "pages/products/index/index",
+      "pages/customize/index/index",
+      "pages/partners/index/index",
       "pages/component/index",
       "pages/component/navigation-pages/controller/controller",
       "pages/component/navigation-pages/form/form",
@@ -70,38 +73,38 @@
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "小程序演示",
+    "navigationBarTitleText": "旺科达光学玻璃",
     "navigationBarBackgroundColor": "#fbf9fe",
     "backgroundColor": "#fbf9fe"
   },
   "tabBar": {
-    "color": "#dddddd",
-    "selectedColor": "#3cc51f",
+    "color": "#bfbfbf",
+    "selectedColor": "#2aa515",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [
     {
       "pagePath": "pages/home/index",
-      "iconPath": "images/wechat.png",
-      "selectedIconPath": "images/wechatHL.png",
+      "iconPath": "images/tabbar/home.png",
+      "selectedIconPath": "images/tabbar/home_selected.png",
       "text": "首页"
     }, 
     {
-      "pagePath": "pages/component/index",
-      "iconPath": "images/wechat.png",
-      "selectedIconPath": "images/wechatHL.png",
+      "pagePath": "pages/products/index/index",
+      "iconPath": "images/tabbar/product.png",
+      "selectedIconPath": "images/tabbar/product_selected.png",
       "text": "产品"
     },
     {
-      "pagePath": "pages/API/index/index",
-      "iconPath": "images/wechat.png",
-      "selectedIconPath": "images/wechatHL.png",
+      "pagePath": "pages/customize/index/index",
+      "iconPath": "images/tabbar/customize.png",
+      "selectedIconPath": "images/tabbar/customize_selected.png",
       "text": "定制"
     },
     {
-      "pagePath": "pages/API/index/index",
-      "iconPath": "images/wechat.png",
-      "selectedIconPath": "images/wechatHL.png",
+      "pagePath": "pages/component/index",
+      "iconPath": "images/tabbar/more.png",
+      "selectedIconPath": "images/tabbar/more_selected.png",
       "text": "更多"
     }
     ]
