@@ -17,10 +17,10 @@
     <view class="page-body-buttons">
       <block wx:if="{{playing === true}}">
         <view class="page-body-button" bindtap="stop">
-          <image src="/image/stop.png"></image>
+          <image src="/images/stop.png"></image>
         </view>
         <view class="page-body-button" bindtap="pause">
-          <image src="/image/pause.png"></image>
+          <image src="/images/pause.png"></image>
         </view>
         <view class="page-body-button" bindtap="play">
           <text class="restart">重播</text>
@@ -29,7 +29,7 @@
       <block wx:if="{{playing === false}}">
         <view class="page-body-button"></view>
         <view class="page-body-button" bindtap="resume">
-          <image src="/image/play.png"></image>
+          <image src="/images/play.png"></image>
         </view>
         <view class="page-body-button" bindtap="play">
           <text class="restart">重播</text>

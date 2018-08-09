@@ -89,8 +89,8 @@ Page({
       opened: false,
       APIList: [{
         zhName: '图片',
-        enName: 'chooseImage/previewImage',
-        url: '../image/image'
+        enName: 'chooseimages/previewImage',
+        url: '../images/image'
       }, {
         zhName: '录音',
         enName: 'start/stopRecord, play/pause/stopVoice',
