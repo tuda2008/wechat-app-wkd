@@ -13,7 +13,37 @@
             </swiper>
         </view>
         <view class="section section_gap">
-            <view class="sub-title" bindtap="goToProducts">产品中心</view>
+            <view class="menu-item" bindtap="goToProducts">
+                <view class="menu-item-title-item">
+                    <text class="menu-item-title-item-text">产品中心</text>
+                </view>
+                <image class="menu-item-title-item-arrow" src="/images/home/more_circle.png" />
+            </view>
+            <view class="flex-wrp" style="flex-direction:row;justify-content: center;">
+                <view class="flex-item">
+                    <image class="menu-item-title-item-arrow" src="/images/home/more_circle.png" />
+                    <text class="product-title">产品A</text>
+                    <text class="product-intro">产品描述a</text>
+                </view>
+                <view class="flex-item">
+                    <image class="menu-item-title-item-arrow" src="/images/home/more_circle.png" />
+                    <text class="product-title">产品B</text>
+                    <text class="product-intro">产品描述b</text>
+                </view>
+                <view class="flex-item">
+                    <image class="menu-item-title-item-arrow" src="/images/home/more_circle.png" />
+                    <text class="product-title">产品C</text>
+                    <text class="product-intro">产品描述c</text>
+                </view>
+            </view>
+        </view>
+        <view class="section section_gap">
+            <view class="menu-item" bindtap="goToCustomize">
+                <view class="menu-item-title-item">
+                    <text class="menu-item-title-item-text">专业定制</text>
+                </view>
+                <image class="menu-item-title-item-arrow" src="/images/home/more_circle.png" />
+            </view>
             <view class="flex-wrp" style="flex-direction:row;justify-content: center;">
                 <view class="flex-item bc_green"></view>
                 <view class="flex-item bc_red"></view>
@@ -21,15 +51,12 @@
             </view>
         </view>
         <view class="section section_gap">
-            <view class="sub-title" bindtap="goToCustomize">专业定制</view>
-            <view class="flex-wrp" style="flex-direction:row;justify-content: center;">
-                <view class="flex-item bc_green"></view>
-                <view class="flex-item bc_red"></view>
-                <view class="flex-item bc_blue"></view>
+            <view class="menu-item" bindtap="goToPartners">
+                <view class="menu-item-title-item">
+                    <text class="menu-item-title-item-text">合作伙伴</text>
+                </view>
+                <image class="menu-item-title-item-arrow" src="/images/home/more_circle.png" />
             </view>
-        </view>
-        <view class="section section_gap">
-            <view class="sub-title" bindtap="goToPartners">合作伙伴</view>
             <view class="flex-wrp" style="flex-direction:row;justify-content: center;">
                 <view class="flex-item bc_green"></view>
                 <view class="flex-item bc_red"></view>

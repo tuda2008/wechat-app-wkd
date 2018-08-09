@@ -4,20 +4,56 @@
 .flex-wrp{
     height: 100px;
     display:flex;
-    background-color: #FFFFFF;
 }
 .flex-item{
     width: 100px;
     height: 100px;
+    border: solid 1px #eee;
+    margin: 0 2rpx 0 3rpx;
+    border-radius: 10rpx;
 }
-.sub-title{
-    width: 100%;
-    background: url(/images/home/arrow-right.png) no-repeat 750rpx center;
-    background-size: 16rpx auto,750rpx auto;
-    margin: 20rpx 0; 
-    font-size: 36rpx;
-    color: #00CC99;
-    border-bottom: 1px solid #eee;
-    height: 60rpx;
-    line-height: 60rpx;
+.flex-image {
+  width: 100px;
+  height: 100px;
+  margin: 0 2rpx 0 3rpx;
+  border-radius: 10rpx;
+}
+
+.product-title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 36rpx;
+  color: #00CC99;
+}
+.product-intro {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 24rpx;
+  color: #00CC99;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  height: 60rpx;
+  margin: 20rpx 0;
+  border-bottom: 1px solid #eee;
+  line-height: 60rpx;
+}
+.menu-item-title-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.menu-item-title-item-text {
+  font-size: 36rpx;
+  color: #00CC99;
+}
+.menu-item-title-item-arrow {
+  width: 48rpx;
+  height: 48rpx;
+  margin: 8rpx 0;
 }
