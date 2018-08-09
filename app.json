@@ -96,6 +96,12 @@
       "iconPath": "images/wechat.png",
       "selectedIconPath": "images/wechatHL.png",
       "text": "定制"
+    },
+    {
+      "pagePath": "pages/API/index/index",
+      "iconPath": "images/wechat.png",
+      "selectedIconPath": "images/wechatHL.png",
+      "text": "更多"
     }
     ]
   },
