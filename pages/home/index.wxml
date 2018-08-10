@@ -51,7 +51,7 @@
                         <swiper autoplay="true" interval="{{item_interval}}" duration="{{item_duration}}">
                             <block wx:for="{{custom.images}}" wx:for-item="custom_image">
                                 <swiper-item>
-                                    <view class="swiper-item" data-id="{{custom.id}}">
+                                    <view class="swiper-item" data-id="{{custom.id}}" bindtap="goToCustomizeProduct">
                                         <view class="flex-image" style="background-image: url({{custom_image}}">
                                             <text class="product-title">{{custom.title}}</text>
                                             <text class="product-intro">{{custom.intro}}</text>

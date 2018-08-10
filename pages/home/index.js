@@ -39,12 +39,21 @@ Page({
 	},
     goToProduct:function(e){
         console.log(e.currentTarget.dataset.id);
+        wx.navigateTo({
+          url: '/pages/products/show/show',
+        });
     },
 	goToCustomize:function(){
 	    wx.switchTab({
 	      url: '/pages/customize/index/index',
 	    });
 	},
+    goToCustomizeProduct:function(e){
+        console.log(e.currentTarget.dataset.id);
+        wx.navigateTo({
+          url: '/pages/customize/show/show',
+        });
+    },
 	goToPartners:function(){
 	    wx.navigateTo({
 	      url: '/pages/partners/index/index',
@@ -52,7 +61,7 @@ Page({
 	},
     callPhone:function(){
         wx.makePhoneCall({
-          phoneNumber: '15014146191', //此号码并非真实电话号码，仅用于测试
+          phoneNumber: '1500000000', //此号码并非真实电话号码，仅用于测试
           success:function(){
             console.log("拨打电话成功！")
           },

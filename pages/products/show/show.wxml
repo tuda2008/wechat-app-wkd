@@ -13,17 +13,24 @@
             </swiper>
         </view>
         <view class="section section_gap">
-            <view class="sub-title">专业定制</view>
+            <view class="sub-title">产品详情</view>
+            
+            <view class="menu-item" bindtap="goToProducts">
+                <view class="menu-item-title-item">
+                    <text class="menu-item-title-item-text">热销产品</text>
+                </view>
+                <image class="menu-item-title-item-arrow" src="/images/home/more_circle.png" />
+            </view>
             <view class="flex-wrp" style="flex-direction:row;justify-content: center;">
-                <block wx:for="{{customize}}" wx:for-item="custom">
+                <block wx:for="{{products}}" wx:for-item="product">
                     <view class="flex-item swiper">
                         <swiper autoplay="true" interval="{{item_interval}}" duration="{{item_duration}}">
-                            <block wx:for="{{custom.images}}" wx:for-item="custom_image">
+                            <block wx:for="{{product.images}}" wx:for-item="image">
                                 <swiper-item>
-                                    <view class="swiper-item" data-id="{{custom.id}}" bindtap="goToCustomizeProduct">
-                                        <view class="flex-image" style="background-image: url({{custom_image}}">
-                                            <text class="product-title">{{custom.title}}</text>
-                                            <text class="product-intro">{{custom.intro}}</text>
+                                    <view class="swiper-item" data-id="{{product.id}}" bindtap="goToProduct">
+                                        <view class="flex-image" style="background-image: url({{image}}">
+                                            <text class="product-title">{{product.title}}</text>
+                                            <text class="product-intro">{{product.intro}}</text>
                                         </view>
                                     </view>
                                 </swiper-item>

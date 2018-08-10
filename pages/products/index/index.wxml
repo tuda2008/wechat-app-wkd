@@ -32,6 +32,9 @@
                     </view>
                 </block>
             </view>
+            <view>
+                <button style="background-image:url('/images/home/phone.png');" class="call" bindtap="callPhone">财富热线</button>
+            </view>
         </view>
     </view>
 </view>
