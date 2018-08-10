@@ -25,7 +25,7 @@
                         <swiper autoplay="true" interval="{{item_interval}}" duration="{{item_duration}}">
                             <block wx:for="{{product.images}}" wx:for-item="image">
                                 <swiper-item>
-                                    <view class="swiper-item">
+                                    <view class="swiper-item" data-id="{{product.id}}" bindtap="goToProduct">
                                         <view class="flex-image" style="background-image: url({{image}}">
                                             <text class="product-title">{{product.title}}</text>
                                             <text class="product-intro">{{product.intro}}</text>
@@ -46,9 +46,22 @@
                 <image class="menu-item-title-item-arrow" src="/images/home/more_circle.png" />
             </view>
             <view class="flex-wrp" style="flex-direction:row;justify-content: center;">
-                <view class="flex-item bc_green"></view>
-                <view class="flex-item bc_red"></view>
-                <view class="flex-item bc_blue"></view>
+                <block wx:for="{{customize}}" wx:for-item="custom">
+                    <view class="flex-item swiper">
+                        <swiper autoplay="true" interval="{{item_interval}}" duration="{{item_duration}}">
+                            <block wx:for="{{custom.images}}" wx:for-item="custom_image">
+                                <swiper-item>
+                                    <view class="swiper-item" data-id="{{custom.id}}">
+                                        <view class="flex-image" style="background-image: url({{custom_image}}">
+                                            <text class="product-title">{{custom.title}}</text>
+                                            <text class="product-intro">{{custom.intro}}</text>
+                                        </view>
+                                    </view>
+                                </swiper-item>
+                            </block>
+                        </swiper>
+                    </view>
+                </block>
             </view>
         </view>
         <view class="section section_gap">
@@ -58,10 +71,18 @@
                 </view>
                 <image class="menu-item-title-item-arrow" src="/images/home/more_circle.png" />
             </view>
-            <view class="flex-wrp" style="flex-direction:row;justify-content: center;">
-                <view class="flex-item bc_green"></view>
-                <view class="flex-item bc_red"></view>
-                <view class="flex-item bc_blue"></view>
+            <view class="partners">
+                <block wx:for="{{partners}}" wx:for-item="partner">
+                    <view class="partners-item">
+                        <view class="partners-info">
+                            <text class="partners-info-name">{{partner.title}}</text>
+                            <image class="partners-info-img" src="/images/home/view.png" background-size="cover" />
+                        </view>
+                    </view>
+                </block>
+            </view>
+            <view>
+                <button style="background-image:url('/images/home/phone.png');" class="call" bindtap="callPhone">财富热线</button>
             </view>
         </view>
     </view>
