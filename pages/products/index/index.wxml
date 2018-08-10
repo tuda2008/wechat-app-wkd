@@ -15,9 +15,22 @@
         <view class="section section_gap">
             <view class="sub-title">产品中心</view>
             <view class="flex-wrp" style="flex-direction:row;justify-content: center;">
-                <view class="flex-item bc_green"></view>
-                <view class="flex-item bc_red"></view>
-                <view class="flex-item bc_blue"></view>
+                <block wx:for="{{products}}" wx:for-item="product">
+                    <view class="flex-item swiper">
+                        <swiper autoplay="true" interval="{{item_interval}}" duration="{{item_duration}}">
+                            <block wx:for="{{product.images}}" wx:for-item="image">
+                                <swiper-item>
+                                    <view class="swiper-item" data-id="{{product.id}}" bindtap="goToProduct">
+                                        <view class="flex-image" style="background-image: url({{image}}">
+                                            <text class="product-title">{{product.title}}</text>
+                                            <text class="product-intro">{{product.intro}}</text>
+                                        </view>
+                                    </view>
+                                </swiper-item>
+                            </block>
+                        </swiper>
+                    </view>
+                </block>
             </view>
         </view>
     </view>

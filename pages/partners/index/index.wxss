@@ -21,3 +21,31 @@
     height: 60rpx;
     line-height: 60rpx;
 }
+
+
+.partners{
+    position: relative;
+    padding-bottom: 10px;
+}
+.partners-item{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(104, 171, 194, .5);
+    color: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.partners-info{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    flex-direction: row;
+}
+.partners-info-name{
+    flex: 1;
+}
+.partners-info-img{
+    width: 30px;
+    height: 30px;
+}

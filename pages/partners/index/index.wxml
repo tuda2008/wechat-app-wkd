@@ -14,10 +14,18 @@
         </view>
         <view class="section section_gap">
             <view class="sub-title">合作伙伴</view>
-            <view class="flex-wrp" style="flex-direction:row;justify-content: center;">
-                <view class="flex-item bc_green"></view>
-                <view class="flex-item bc_red"></view>
-                <view class="flex-item bc_blue"></view>
+            <view class="partners">
+                <block wx:for="{{partners}}" wx:for-item="partner">
+                    <view class="partners-item">
+                        <view class="partners-info">
+                            <text class="partners-info-name">{{partner.title}}</text>
+                            <image class="partners-info-img" src="/images/home/view.png" background-size="cover" />
+                        </view>
+                    </view>
+                </block>
+            </view>
+            <view>
+                <button style="background-image:url('/images/home/phone.png');" class="call" bindtap="callPhone">财富热线</button>
             </view>
         </view>
     </view>

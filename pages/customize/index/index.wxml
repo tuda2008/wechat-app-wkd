@@ -15,9 +15,22 @@
         <view class="section section_gap">
             <view class="sub-title">专业定制</view>
             <view class="flex-wrp" style="flex-direction:row;justify-content: center;">
-                <view class="flex-item bc_green"></view>
-                <view class="flex-item bc_red"></view>
-                <view class="flex-item bc_blue"></view>
+                <block wx:for="{{customize}}" wx:for-item="custom">
+                    <view class="flex-item swiper">
+                        <swiper autoplay="true" interval="{{item_interval}}" duration="{{item_duration}}">
+                            <block wx:for="{{custom.images}}" wx:for-item="custom_image">
+                                <swiper-item>
+                                    <view class="swiper-item" data-id="{{custom.id}}">
+                                        <view class="flex-image" style="background-image: url({{custom_image}}">
+                                            <text class="product-title">{{custom.title}}</text>
+                                            <text class="product-intro">{{custom.intro}}</text>
+                                        </view>
+                                    </view>
+                                </swiper-item>
+                            </block>
+                        </swiper>
+                    </view>
+                </block>
             </view>
         </view>
     </view>
