@@ -3,7 +3,10 @@
 var app = getApp();
 Page({
     data: {
-        background: ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', '/images/home/carousel/factory3.jpg'],
+        current_product: {
+        'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
+        '/images/home/carousel/factory3.jpg'], 'id': 1, 'title': '产品a', 'intro': '产品描述a'
+        },
         indicatorDots: true,
         vertical: false,
         autoplay: true,

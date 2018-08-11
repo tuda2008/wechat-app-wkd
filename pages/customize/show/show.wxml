@@ -3,7 +3,7 @@
         <view class="section section_gap swiper">
             <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
                     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-                <block wx:for-items="{{background}}">
+                <block wx:for-items="{{customize.images}}">
                     <swiper-item>
                         <view class="swiper-item">
                             <image src="{{item}}" />
@@ -14,6 +14,10 @@
         </view>
         <view class="section section_gap">
             <view class="sub-title">定制详情</view>
+            <view>
+                <text class="detail-title">{{customize.title}}</text>
+                <text class="detail-intro">{{customize.intro}}</text>
+            </view>
             
             <view class="menu-item" bindtap="goToCustomize">
                 <view class="menu-item-title-item">
