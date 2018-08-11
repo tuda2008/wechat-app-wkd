@@ -1,0 +1,15 @@
+<view class="container">
+    <view class="header">
+        <view>
+            <image class="logo" src="/images/start/logo.png"></image>
+        </view>
+    </view>
+    <view class="line"></view>
+    <view class="my-item">
+        <text>{{about.company}}</text>
+    </view>
+    <view class="my-item">
+        <text>{{about.intro}}</text>
+    </view>
+    <view class="line"></view>
+</view>

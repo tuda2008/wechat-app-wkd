@@ -1,0 +1,24 @@
+<view class="container">
+    <view class="header">
+        <view>
+            <image class="logo" src="/images/start/logo.png"></image>
+        </view>
+    </view>
+
+    <view class="line"></view>
+    <view class="my-item" bindtap="gotoAbout">
+        <text hover-class="navigator-hover">关于我们</text>
+    </view>
+    <view class="my-item" bindtap="callPhone">
+        <text hover-class="navigator-hover">联系客服</text>
+    </view>
+    <view class="my-item" bindtap="gotoFactory">
+        <text hover-class="navigator-hover">前往工厂</text>
+    </view>
+
+    <view class="line"></view>
+    <view class="advise">营业时间 周一到周六 8:30---18:00</view>
+    <view class="line"></view>
+    <view class="advise">APP、小程序、公众号、网站定制请微信联系letu86</view>
+    <view class="line"></view>
+</view>

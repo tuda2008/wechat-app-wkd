@@ -1,5 +1,5 @@
-//start.js
-//home
+//show.js
+//products
 var app = getApp();
 Page({
     data: {
@@ -33,5 +33,16 @@ Page({
         wx.navigateTo({
           url: '/pages/products/show/show',
         });
+    },
+    callPhone:function(){
+        wx.makePhoneCall({
+          phoneNumber: '1500000000', //此号码并非真实电话号码，仅用于测试
+          success:function(){
+            console.log("拨打电话成功！")
+          },
+          fail:function(){
+            console.log("拨打电话失败！")
+          }
+        })
     }
 })
