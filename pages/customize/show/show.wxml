@@ -12,40 +12,35 @@
                 </block>
             </swiper>
         </view>
+
         <view class="section section_gap">
             <view class="sub-title">定制详情</view>
             <view>
                 <text class="detail-title">{{customize.title}}</text>
                 <text class="detail-intro">{{customize.intro}}</text>
             </view>
-            
-            <view class="menu-item" bindtap="goToCustomize">
-                <view class="menu-item-title-item">
-                    <text class="menu-item-title-item-text">热门定制</text>
+        </view>
+
+        <view class="product">
+            <view class="menu" bindtap="goToCustomize">
+                <view class="menu-title-item">
+                    <text class="menu-title-item-text">热门定制</text>
                 </view>
-                <image class="menu-item-title-item-arrow" src="/images/home/more_circle.png" />
+                <image class="menu-title-item-arrow" src="/images/home/more_circle.png" />
             </view>
-            <view class="flex-wrp" style="flex-direction:row;justify-content: center;">
-                <block wx:for="{{customize_products}}" wx:for-item="product">
-                    <view class="flex-item swiper">
-                        <swiper autoplay="true" interval="{{item_interval}}" duration="{{item_duration}}">
-                            <block wx:for="{{product.images}}" wx:for-item="image">
-                                <swiper-item>
-                                    <view class="swiper-item" data-id="{{product.id}}" bindtap="goToCustomizeProduct">
-                                        <view class="flex-image" style="background-image: url({{image}}">
-                                            <text class="product-title">{{product.title}}</text>
-                                            <text class="product-intro">{{product.intro}}</text>
-                                        </view>
-                                    </view>
-                                </swiper-item>
-                            </block>
-                        </swiper>
+            <view class="product-box">
+                <block wx:for="{{customize_products}}" wx:for-item="custom">
+                    <view class="product-detail" data-id="{{custom.id}}" bindtap="goToCustomizeProduct">
+                        <image class="image" src="{{custom.images[1]}}"></image>
+                        <view class="title"><text>{{custom.title}}</text></view>
+                        <view class="intro"><text>{{custom.intro}}</text></view>
                     </view>
                 </block>
             </view>
-            <view>
-                <button style="background-image:url('/images/home/phone.png');" class="call" bindtap="callPhone">财富热线</button>
-            </view>
+        </view>
+
+        <view>
+            <button style="background-image:url('/images/home/phone.png');" class="call" bindtap="callPhone">财富热线</button>
         </view>
     </view>
 </view>

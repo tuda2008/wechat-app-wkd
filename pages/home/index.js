@@ -14,7 +14,9 @@ Page({
         {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
         '/images/home/carousel/factory3.jpg'], 'id': 2, 'title': '产品b', 'intro': '产品描述b'},
         {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
-        '/images/home/carousel/factory3.jpg'], 'id': 3, 'title': '产品c', 'intro': '产品描述c'}
+        '/images/home/carousel/factory3.jpg'], 'id': 3, 'title': '产品c', 'intro': '产品描述c'},
+        {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
+        '/images/home/carousel/factory3.jpg'], 'id': 4, 'title': '产品d', 'intro': '产品描述d'}
         ],
         customize: [
         {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
@@ -22,7 +24,9 @@ Page({
         {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
         '/images/home/carousel/factory3.jpg'], 'id': 2, 'title': '定制b', 'intro': '定制描述b'},
         {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
-        '/images/home/carousel/factory3.jpg'], 'id': 3, 'title': '定制c', 'intro': '定制描述c'}
+        '/images/home/carousel/factory3.jpg'], 'id': 3, 'title': '定制c', 'intro': '定制描述c'},
+        {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
+        '/images/home/carousel/factory3.jpg'], 'id': 4, 'title': '定制d', 'intro': '定制描述d'}
         ],
         partners: [
         {'id': 1, 'title': '明德电子', 'web_url': ''},

@@ -5,7 +5,7 @@ Page({
     data: {
         customize: {
         'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
-        '/images/home/carousel/factory3.jpg'], 'id': 1, 'title': '产品a', 'intro': '产品描述a'
+        '/images/home/carousel/factory3.jpg'], 'id': 1, 'title': '定制a', 'intro': '定制描述a'
         },
         indicatorDots: true,
         vertical: false,
@@ -16,11 +16,11 @@ Page({
         item_duration: 0,
         customize_products: [
         {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
-        '/images/home/carousel/factory3.jpg'], 'id': 1, 'title': '产品a', 'intro': '产品描述a'},
+        '/images/home/carousel/factory3.jpg'], 'id': 1, 'title': '定制a', 'intro': '定制描述a'},
         {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
-        '/images/home/carousel/factory3.jpg'], 'id': 2, 'title': '产品b', 'intro': '产品描述b'},
+        '/images/home/carousel/factory3.jpg'], 'id': 2, 'title': '定制b', 'intro': '定制描述b'},
         {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
-        '/images/home/carousel/factory3.jpg'], 'id': 3, 'title': '产品c', 'intro': '产品描述c'}
+        '/images/home/carousel/factory3.jpg'], 'id': 3, 'title': '定制c', 'intro': '定制描述c'}
         ]
     },
     goToCustomize:function(){

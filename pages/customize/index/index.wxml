@@ -12,29 +12,26 @@
                 </block>
             </swiper>
         </view>
-        <view class="section section_gap">
-            <view class="sub-title">专业定制</view>
-            <view class="flex-wrp" style="flex-direction:row;justify-content: center;">
+
+        <view class="product">
+            <view class="menu">
+                <view class="menu-title-item">
+                    <text class="menu-title-item-text">专业定制</text>
+                </view>
+            </view>
+            <view class="product-box">
                 <block wx:for="{{customize}}" wx:for-item="custom">
-                    <view class="flex-item swiper">
-                        <swiper autoplay="true" interval="{{item_interval}}" duration="{{item_duration}}">
-                            <block wx:for="{{custom.images}}" wx:for-item="custom_image">
-                                <swiper-item>
-                                    <view class="swiper-item" data-id="{{custom.id}}" bindtap="goToCustomizeProduct">
-                                        <view class="flex-image" style="background-image: url({{custom_image}}">
-                                            <text class="product-title">{{custom.title}}</text>
-                                            <text class="product-intro">{{custom.intro}}</text>
-                                        </view>
-                                    </view>
-                                </swiper-item>
-                            </block>
-                        </swiper>
+                    <view class="product-detail" data-id="{{custom.id}}" bindtap="goToCustomizeProduct">
+                        <image class="image" src="{{custom.images[1]}}"></image>
+                        <view class="title"><text>{{custom.title}}</text></view>
+                        <view class="intro"><text>{{custom.intro}}</text></view>
                     </view>
                 </block>
             </view>
-            <view>
-                <button style="background-image:url('/images/home/phone.png');" class="call" bindtap="callPhone">财富热线</button>
-            </view>
+        </view>
+
+        <view>
+            <button style="background-image:url('/images/home/phone.png');" class="call" bindtap="callPhone">财富热线</button>
         </view>
     </view>
 </view>
