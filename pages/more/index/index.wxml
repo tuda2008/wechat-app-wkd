@@ -7,13 +7,16 @@
 
     <view class="line"></view>
     <view class="my-item" bindtap="gotoAbout">
-        <text hover-class="navigator-hover">关于我们</text>
+        <button class="menu">关于我们</button>
     </view>
     <view class="my-item" bindtap="callPhone">
-        <text hover-class="navigator-hover">联系客服</text>
+        <button class="menu">联系客服</button>
     </view>
     <view class="my-item" bindtap="gotoFactory">
-        <text hover-class="navigator-hover">前往工厂</text>
+        <button class="menu">前往工厂</button>
+    </view>
+    <view class="my-item">
+        <button class="menu" open-type="share">分享给好友</button>
     </view>
 
     <view class="line"></view>

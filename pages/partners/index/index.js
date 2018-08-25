@@ -3,7 +3,12 @@
 var app = getApp();
 Page({
     data: {
-        background: ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', '/images/home/carousel/factory3.jpg'],
+        local_carousels: true,
+        carousels: [
+        {'url': '/images/home/carousel/factory1.jpg'}, 
+        {'url': '/images/home/carousel/factory1.jpg'},
+        {'url': '/images/home/carousel/factory1.jpg'}
+        ],
         indicatorDots: true,
         vertical: false,
         autoplay: true,
@@ -15,14 +20,37 @@ Page({
         {'id': 3, 'title': '兴标龙表业', 'web_url': ''}
         ],
     },
-	goToPartners:function(){
+    onLoad(){
+        var self = this;
+        /**
+         * 发起请求获取partners信息
+         */
+        wx.request({
+          url: 'https://www.gxboli.cn/partners.json',
+          success(res){
+            if (res.data.carousels.size > 0) {
+              self.setData({
+                local_carousels: false,
+                carousels: res.data.carousels,
+                partners: res.data.partners
+              })
+            } else {
+              self.setData({
+                local_carousels: true,
+                partners: res.data.partners
+              })
+            }
+          }
+        })
+    },
+	  goToPartners:function(){
 	    wx.switchTab({
 	      url: '/pages/partners/index/index',
 	    });
-	},
+	  },
     callPhone:function(){
         wx.makePhoneCall({
-          phoneNumber: '1500000000', //此号码并非真实电话号码，仅用于测试
+          phoneNumber: '15014146191', //此号码并非真实电话号码，仅用于测试
           success:function(){
             console.log("拨打电话成功！")
           },

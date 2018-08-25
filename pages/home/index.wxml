@@ -6,7 +6,7 @@
                 <block wx:for="{{carousels}}">
                     <swiper-item>
                         <view class="swiper-item">
-                            <image src="{{item}}" />
+                            <image src="{{item.url}}" />
                         </view>
                     </swiper-item>
                 </block>
@@ -23,7 +23,7 @@
             <view class="product-box">
                 <block wx:for="{{products}}" wx:for-item="product">
                     <view class="product-detail" data-id="{{product.id}}" bindtap="goToProduct">
-                        <image class="image" src="{{product.images[0]}}"></image>
+                        <image class="image" src="{{product.image}}"></image>
                         <view class="title"><text>{{product.title}}</text></view>
                         <view class="intro"><text>{{product.intro}}</text></view>
                     </view>
@@ -41,7 +41,7 @@
             <view class="product-box">
                 <block wx:for="{{customize}}" wx:for-item="custom">
                     <view class="product-detail" data-id="{{custom.id}}" bindtap="goToCustomizeProduct">
-                        <image class="image" src="{{custom.images[1]}}"></image>
+                        <image class="image" src="{{custom.image}}"></image>
                         <view class="title"><text>{{custom.title}}</text></view>
                         <view class="intro"><text>{{custom.intro}}</text></view>
                     </view>

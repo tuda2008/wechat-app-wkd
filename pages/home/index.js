@@ -3,30 +3,26 @@
 var app = getApp();
 Page({
     data: {
-        carousels: ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', '/images/home/carousel/factory3.jpg'],
+        carousels: [
+        {'url': '/images/home/carousel/factory1.jpg'}, 
+        {'url': '/images/home/carousel/factory1.jpg'},
+        {'url': '/images/home/carousel/factory1.jpg'}
+        ],
         indicatorDots: true,
         autoplay: true,
         interval: 3000,
         duration: 2000,
         products: [
-        {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
-        '/images/home/carousel/factory3.jpg'], 'id': 1, 'title': '产品a', 'intro': '产品描述a'},
-        {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
-        '/images/home/carousel/factory3.jpg'], 'id': 2, 'title': '产品b', 'intro': '产品描述b'},
-        {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
-        '/images/home/carousel/factory3.jpg'], 'id': 3, 'title': '产品c', 'intro': '产品描述c'},
-        {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
-        '/images/home/carousel/factory3.jpg'], 'id': 4, 'title': '产品d', 'intro': '产品描述d'}
+        {'image': '', 'id': 1, 'title': '产品a', 'intro': '产品描述a'},
+        {'image': '', 'id': 2, 'title': '产品b', 'intro': '产品描述b'},
+        {'image': '', 'id': 3, 'title': '产品c', 'intro': '产品描述c'},
+        {'image': '', 'id': 4, 'title': '产品d', 'intro': '产品描述d'}
         ],
         customize: [
-        {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
-        '/images/home/carousel/factory3.jpg'], 'id': 1, 'title': '定制a', 'intro': '定制描述a'},
-        {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
-        '/images/home/carousel/factory3.jpg'], 'id': 2, 'title': '定制b', 'intro': '定制描述b'},
-        {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
-        '/images/home/carousel/factory3.jpg'], 'id': 3, 'title': '定制c', 'intro': '定制描述c'},
-        {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
-        '/images/home/carousel/factory3.jpg'], 'id': 4, 'title': '定制d', 'intro': '定制描述d'}
+        {'image': '', 'id': 1, 'title': '定制a', 'intro': '定制描述a'},
+        {'image': '', 'id': 2, 'title': '定制b', 'intro': '定制描述b'},
+        {'image': '', 'id': 3, 'title': '定制c', 'intro': '定制描述c'},
+        {'image': '', 'id': 4, 'title': '定制d', 'intro': '定制描述d'}
         ],
         partners: [
         {'id': 1, 'title': '明德电子', 'web_url': ''},
@@ -36,6 +32,32 @@ Page({
         item_interval: 5000,
         item_duration: 0
     },
+    onLoad(){
+        var self = this;
+        /**
+         * 发起请求获取home信息
+         */
+        wx.request({
+          url: 'https://www.gxboli.cn/home.json',
+          success(res){
+            //console.log(res);
+            if (res.data.carousels.size > 0) {
+              self.setData({
+                carousels: res.data.carousels,
+                products: res.data.products,
+                customize: res.data.customize,
+                partners: res.data.partners
+              })
+            } else {
+              self.setData({
+                products: res.data.products,
+                customize: res.data.customize,
+                partners: res.data.partners
+              })
+            }
+          }
+        })
+    },
     goToProducts:function(){
     	wx.switchTab({
            url: "/pages/products/index/index",
@@ -44,7 +66,7 @@ Page({
     goToProduct:function(e){
         console.log(e.currentTarget.dataset.id);
         wx.navigateTo({
-          url: '/pages/products/show/show',
+          url: '/pages/products/show/show?id=' + e.currentTarget.dataset.id,
         });
     },
 	goToCustomize:function(){
@@ -55,7 +77,7 @@ Page({
     goToCustomizeProduct:function(e){
         console.log(e.currentTarget.dataset.id);
         wx.navigateTo({
-          url: '/pages/customize/show/show',
+          url: '/pages/customize/show/show?id=' + e.currentTarget.dataset.id,
         });
     },
 	goToPartners:function(){
@@ -65,7 +87,7 @@ Page({
 	},
     callPhone:function(){
         wx.makePhoneCall({
-          phoneNumber: '1500000000', //此号码并非真实电话号码，仅用于测试
+          phoneNumber: '15014146191', //此号码并非真实电话号码，仅用于测试
           success:function(){
             console.log("拨打电话成功！")
           },

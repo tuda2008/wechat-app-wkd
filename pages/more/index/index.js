@@ -21,9 +21,16 @@ Page({
             }
         })
     },
+    onShareAppMessage:function(){
+        return{
+            title: "旺科达-专业生产定制玻璃",
+            imageUrl: "/images/start/share.png",
+            path: "/pages/start/start"
+        }
+    },
     callPhone:function(){
         wx.makePhoneCall({
-            phoneNumber: '1500000000', //此号码并非真实电话号码，仅用于测试
+            phoneNumber: '15014146191', //此号码并非真实电话号码，仅用于测试
             success:function(){
                 console.log("拨打电话成功！")
             },

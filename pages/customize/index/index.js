@@ -3,7 +3,11 @@
 var app = getApp();
 Page({
     data: {
-        background: ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', '/images/home/carousel/factory3.jpg'],
+        carousels: [
+        {'url': '/images/home/carousel/factory1.jpg'}, 
+        {'url': '/images/home/carousel/factory1.jpg'},
+        {'url': '/images/home/carousel/factory1.jpg'}
+        ],
         indicatorDots: true,
         vertical: false,
         autoplay: true,
@@ -12,13 +16,33 @@ Page({
         item_interval: 5000,
         item_duration: 0,
         customize: [
-        {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
-        '/images/home/carousel/factory3.jpg'], 'id': 1, 'title': '定制a', 'intro': '定制描述a'},
-        {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
-        '/images/home/carousel/factory3.jpg'], 'id': 2, 'title': '定制b', 'intro': '定制描述b'},
-        {'images': ['/images/home/carousel/factory1.jpg', '/images/home/carousel/factory2.jpg', 
-        '/images/home/carousel/factory3.jpg'], 'id': 3, 'title': '定制c', 'intro': '定制描述c'}
+        {'image': '', 'id': 1, 'title': '定制a', 'intro': '定制描述a'},
+        {'image': '', 'id': 2, 'title': '定制b', 'intro': '定制描述b'},
+        {'image': '', 'id': 3, 'title': '定制c', 'intro': '定制描述c'},
+        {'image': '', 'id': 4, 'title': '定制d', 'intro': '定制描述d'}
         ]
+    },
+    onLoad(){
+        var self = this;
+        /**
+         * 发起请求获取customizes信息
+         */
+        wx.request({
+          url: 'https://www.gxboli.cn/customizes.json',
+          success(res){
+            //console.log(res);
+            if (res.data.carousels.size > 0) {
+              self.setData({
+                carousels: res.data.carousels,
+                customize: res.data.customize
+              })
+            } else {
+              self.setData({
+                customize: res.data.customize
+              })
+            }
+          }
+        })
     },
 	goToCustomize:function(){
 	    wx.switchTab({
@@ -28,12 +52,12 @@ Page({
     goToCustomizeProduct:function(e){
         console.log(e.currentTarget.dataset.id);
         wx.navigateTo({
-          url: '/pages/customize/show/show',
+          url: '/pages/customize/show/show?id=' + e.currentTarget.dataset.id,
         });
     },
     callPhone:function(){
         wx.makePhoneCall({
-          phoneNumber: '1500000000', //此号码并非真实电话号码，仅用于测试
+          phoneNumber: '15014146191', //此号码并非真实电话号码，仅用于测试
           success:function(){
             console.log("拨打电话成功！")
           },

@@ -27,11 +27,16 @@
 
 .my-item{
     width: 100%;
-    border-bottom: 1px solid #eee;
-    height: 100rpx;
-    line-height: 120rpx;
-    padding-left: 60rpx;
-    padding-bottom: 20rpx;
+    height: 132rpx;
+    padding-top: 6rpx;
+    padding-bottom: 6rpx;
+}
+
+.my-item .menu {
+    text-align: left;
+    height: 122rpx;
+    padding-top: 14rpx;
+    padding-left: 40rpx;
 }
 
 .about{
