@@ -8,7 +8,8 @@
       "pages/customize/show/show",
       "pages/partners/index/index",
       "pages/more/index/index",
-      "pages/more/about/about"
+      "pages/more/about/about",
+      "pages/more/map/map"
   ],
   "window": {
     "backgroundTextStyle": "light",

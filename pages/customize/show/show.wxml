@@ -1,3 +1,5 @@
+<import src="../../../wxmlify/wxmlify.wxml" />
+
 <view class="page">
     <view class="page__bd">
         <view class="section section_gap swiper">
@@ -19,6 +21,7 @@
                 <text class="detail-title">{{customize.title}}</text>
                 <text class="detail-intro">{{customize.intro}}</text>
             </view>
+            <template is="wxmlify" data="{{nodes: description}}"></template>
         </view>
 
         <view class="product">
@@ -34,7 +37,6 @@
                         <image class="image" src="{{custom.image}}"></image>
                         <view class="title"><text>{{custom.title}}</text></view>
                         <view class="intro"><text>{{custom.intro}}</text></view>
-                        <view class="intro"><text>{{custom.description}}</text></view>
                     </view>
                 </block>
             </view>

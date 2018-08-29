@@ -8,6 +8,11 @@ Page({
             url: '/pages/more/about/about',
         });
     },
+    gotoMap:function(){
+        wx.navigateTo({
+            url: '/pages/more/map/map',
+        });
+    },
     gotoFactory:function(){
         wx.getLocation({//获取当前经纬度
             type: 'wgs84', //返回可以用于wx.openLocation的经纬度，官方提示bug: iOS 6.3.30 type 参数不生效，只会返回 wgs84 类型的坐标信息  

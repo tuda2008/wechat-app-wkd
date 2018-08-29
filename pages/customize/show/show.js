@@ -1,12 +1,14 @@
 //show.js
 //customize
+var Wxmlify = require('../../../wxmlify/wxmlify.js')
 var app = getApp();
 Page({
     data: {
         customize: {
         'images': [{'url': '/images/home/carousel/factory1.jpg'}, {'url': '/images/home/carousel/factory2.jpg'}, 
-        {'url': '/images/home/carousel/factory3.jpg'}], 'id': 1, 'title': '定制a', 'intro': '定制描述a'
+        {'url': '/images/home/carousel/factory3.jpg'}], 'id': 1, 'title': '定制a', 'intro': '定制描述a', 'description': ''
         },
+        wxmlify: '',
         indicatorDots: true,
         vertical: false,
         autoplay: true,
@@ -32,6 +34,13 @@ Page({
             //console.log(res);
             self.setData({
               customize: res.data.customize,
+              wxmlify: new Wxmlify(res.data.customize.description, self, {
+                dataKey: 'description',
+                disableImagePreivew: false,
+                onImageTap: function (e) {
+                  //console.log(e)
+                }
+              }),
               customize_products: res.data.customize_products
             })
           }
@@ -41,7 +50,7 @@ Page({
 	    wx.switchTab({
 	      url: '/pages/customize/index/index',
 	    });
-	},
+	  },
     goToCustomizeProduct:function(e){
         //console.log(e.currentTarget.dataset.id);
         wx.navigateTo({

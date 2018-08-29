@@ -1,12 +1,14 @@
 //show.js
-//products
+//product
+var Wxmlify = require('../../../wxmlify/wxmlify.js')
 var app = getApp();
 Page({
     data: {
         current_product: {
         'images': [{'url': '/images/home/carousel/factory1.jpg'}, {'url': '/images/home/carousel/factory2.jpg'}, 
-        {'url': '/images/home/carousel/factory3.jpg'}], 'id': 1, 'title': '产品a', 'intro': '产品描述a'
+        {'url': '/images/home/carousel/factory3.jpg'}], 'id': 1, 'title': '产品a', 'intro': '产品描述a', 'description': ''
         },
+        wxmlify: '',
         indicatorDots: true,
         vertical: false,
         autoplay: true,
@@ -29,9 +31,17 @@ Page({
         wx.request({
           url: 'https://www.gxboli.cn/products/' + options.id + '.json',
           success(res){
-            //console.log(res);
+            console.log(res.data.current_product.description);
+
             self.setData({
               current_product: res.data.current_product,
+              wxmlify: new Wxmlify(res.data.current_product.description, self, {
+                dataKey: 'description',
+                disableImagePreivew: false,
+                onImageTap: function (e) {
+                  //console.log(e)
+                }
+              }),
               products: res.data.products
             })
           }
@@ -41,12 +51,11 @@ Page({
 	    wx.switchTab({
 	      url: '/pages/products/index/index',
 	    });
-	},
+	  },
     goToProduct:function(e){
         //console.log(e.currentTarget.dataset.id);
         wx.navigateTo({
           url: '/pages/products/show/show?id=' + e.currentTarget.dataset.id,
-
         });
     },
     callPhone:function(){
