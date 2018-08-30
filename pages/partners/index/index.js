@@ -50,7 +50,7 @@ Page({
 	  },
     callPhone:function(){
         wx.makePhoneCall({
-          phoneNumber: '15014146191', //此号码并非真实电话号码，仅用于测试
+          phoneNumber: app.globalData.mobile,
           success:function(){
             console.log("拨打电话成功！")
           },

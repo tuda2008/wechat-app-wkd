@@ -9,6 +9,7 @@ App({
     console.log('App Hide')
   },
   globalData: {
-    hasLogin: false
+    hasLogin: false,
+    mobile: '15919984998'
   }
 })
