@@ -3,11 +3,9 @@
 var app = getApp();
 Page({
     data: {
-        local_carousels: true,
         carousels: [
-        {'url': '/images/home/carousel/factory1.jpg'}, 
-        {'url': '/images/home/carousel/factory1.jpg'},
-        {'url': '/images/home/carousel/factory1.jpg'}
+        {'url': '/images/partner/carousel/p1.png'}, 
+        {'url': '/images/partner/carousel/p2.png'}
         ],
         indicatorDots: true,
         vertical: false,
@@ -30,13 +28,11 @@ Page({
           success(res){
             if (res.data.carousels.size > 0) {
               self.setData({
-                local_carousels: false,
                 carousels: res.data.carousels,
                 partners: res.data.partners
               })
             } else {
               self.setData({
-                local_carousels: true,
                 partners: res.data.partners
               })
             }

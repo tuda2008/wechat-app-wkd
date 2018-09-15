@@ -5,11 +5,8 @@
                     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
                 <block wx:for-items="{{carousels}}">
                     <swiper-item>
-                        <view wx:if="{{local_carousels}}" class="swiper-item">
-                            <image src="{{item.url}}" />
-                        </view>
-                        <view wx:else class="swiper-item">
-                            <image src="https://www.gxboli.cn{{item.url}}" />
+                        <view class="swiper-item">
+                            <image src="{{item.url}}" class="slide-image" />
                         </view>
                     </swiper-item>
                 </block>
