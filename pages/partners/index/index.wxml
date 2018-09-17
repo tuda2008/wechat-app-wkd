@@ -25,7 +25,7 @@
                 </block>
             </view>
             <view>
-                <button style="background-image:url('/images/home/phone.png');" class="call" bindtap="callPhone">财富热线</button>
+                <button style="background:url('/images/home/phone.png') left center no-repeat;background-size:48rpx 60rpx;" class="call" bindtap="callPhone">财富热线</button>
             </view>
         </view>
     </view>
