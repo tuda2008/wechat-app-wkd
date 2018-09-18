@@ -217,7 +217,7 @@ checkbox, radio{
 }
 
 .call{
-  width: 26vw;
+  width: 28vw;
   position: fixed;
   right: 36rpx;
   bottom: 80rpx;
