@@ -4,8 +4,9 @@ var app = getApp();
 
 Page({
   data: {
-    remind: '加载中',
+    remind: '正在玩命加载中',
     angle: 0,
+    title: '旺科达光学玻璃',
     currentYear: new Date().getFullYear(),
     userInfo: {}
   },
@@ -17,15 +18,13 @@ Page({
   onLoad:function(){
     var that = this
     wx.setNavigationBarTitle({
-      title: wx.getStorageSync('mallName')
+      title: that.data.title
     })
   },
   onShow:function(){
-
   },
   onReady: function(){
     var that = this;
-    
     setTimeout(function(){
       that.setData({
         remind: ''
@@ -45,6 +44,7 @@ Page({
       wx.switchTab({
         url: '/pages/home/index',
       });
+      wx.setStorageSync('hideStartPage', "true");
     }, 4000);
   }
 });

@@ -1,6 +1,11 @@
 App({
   onLaunch: function () {
     console.log('App Launch')
+    if (wx.getStorageSync('hideStartPage').length>0) {
+      wx.switchTab({
+        url: '/pages/home/index',
+      })
+    }
   },
   onShow: function () {
     console.log('App Show')

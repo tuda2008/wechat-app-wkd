@@ -29,7 +29,7 @@ Page({
     onShareAppMessage:function(){
         return{
             title: "旺科达-专业生产定制玻璃",
-            path: "/pages/start/start",
+            path: "/pages/home/index",
             success: (res)=>{
                 console.log(res.shareTickets[0])
                 wx.getShareInfo({
