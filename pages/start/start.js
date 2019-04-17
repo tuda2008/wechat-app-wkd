@@ -1,10 +1,12 @@
 //start.js
 //welcome
 var app = getApp();
+
 Page({
   data: {
     remind: '加载中',
     angle: 0,
+    currentYear: new Date().getFullYear(),
     userInfo: {}
   },
   goToIndex:function(){

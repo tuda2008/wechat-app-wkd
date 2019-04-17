@@ -16,7 +16,7 @@
         <view class="confirm-btn" bindtap='goToIndex'>
           <text>我知道了</text>
         </view>
-        <text class="copyright">Copyright © 2017-2018 Wangkeda All Rights Reserved</text>
+        <text class="copyright">Copyright © 2017-{{currentYear}} Wangkeda All Rights Reserved</text>
       </view>
     </view>
   </block>
