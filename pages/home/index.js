@@ -62,29 +62,50 @@ Page({
     	wx.switchTab({
            url: "/pages/products/index/index",
         })
-	},
+	  },
     goToProduct:function(e){
         console.log(e.currentTarget.dataset.id);
         wx.navigateTo({
           url: '/pages/products/show/show?id=' + e.currentTarget.dataset.id,
         });
     },
-	goToCustomize:function(){
+	  goToCustomize:function(){
 	    wx.switchTab({
 	      url: '/pages/customize/index/index',
 	    });
-	},
+	  },
     goToCustomizeProduct:function(e){
         console.log(e.currentTarget.dataset.id);
         wx.navigateTo({
           url: '/pages/customize/show/show?id=' + e.currentTarget.dataset.id,
         });
     },
-	goToPartners:function(){
+	  goToPartners:function(){
 	    wx.navigateTo({
 	      url: '/pages/partners/index/index',
 	    });
-	},
+	  },
+    onShareAppMessage:function(){
+        return{
+            title: "旺科达-专业生产定制玻璃",
+            path: "/pages/start/start",
+            success: (res)=>{
+                console.log(res.shareTickets[0])
+                wx.getShareInfo({
+                  shareTicket: res.shareTickets[0],
+                  success: function (res) { console.log(res) },
+                  fail: function (res) { console.log(res) },
+                  complete: function (res) { console.log(res) }
+                })
+            },
+            fail: function (res) {
+                console.log(res)
+            },
+            complete: function (res) {
+                console.log(res)
+            }
+        }
+    },
     callPhone:function(){
         wx.makePhoneCall({
           phoneNumber: app.globalData.mobile,

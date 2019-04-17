@@ -24,4 +24,6 @@
     <view class="line"></view>
     <view class="advise">APP、小程序、公众号、网站定制请微信联系letu86</view>
     <view class="line"></view>
+
+    <contact-button class="contact" type="default-dark" size="30" session-from="weapp"></contact-button>
 </view>

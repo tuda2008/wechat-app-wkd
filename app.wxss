@@ -361,3 +361,9 @@ checkbox, radio{
   font-weight: bold;
 }
 /**wxmlified html wxss end**/
+
+.contact {
+  right: 40rpx;
+  bottom: 150rpx;
+  position: fixed;
+}

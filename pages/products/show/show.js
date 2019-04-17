@@ -58,6 +58,27 @@ Page({
           url: '/pages/products/show/show?id=' + e.currentTarget.dataset.id,
         });
     },
+    onShareAppMessage:function(){
+        return{
+            title: "旺科达-专业生产定制玻璃",
+            path: "/pages/start/start",
+            success: (res)=>{
+                console.log(res.shareTickets[0])
+                wx.getShareInfo({
+                  shareTicket: res.shareTickets[0],
+                  success: function (res) { console.log(res) },
+                  fail: function (res) { console.log(res) },
+                  complete: function (res) { console.log(res) }
+                })
+            },
+            fail: function (res) {
+                console.log(res)
+            },
+            complete: function (res) {
+                console.log(res)
+            }
+        }
+    },
     callPhone:function(){
         wx.makePhoneCall({
           phoneNumber: app.globalData.mobile,

@@ -57,7 +57,7 @@
                 <image class="menu-item-title-item-arrow" src="/images/home/more_circle.png" />
             </view>
             <view class="partners">
-                <block wx:for="{{partners}}" wx:for-item="partner">
+                <block wx:for="{{partners}}" wx:for-item="partner" wx:key="{{item.id}}">
                     <view class="partners-item">
                         <view class="partners-info">
                             <text class="partners-info-name">{{partner.title}}</text>
